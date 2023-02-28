@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06remove.html</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <style>
+        .con{ font-size: 20pt;
+              color: darkolivegreen;}
+    </style>
+    <script>
+        $(document).ready(function(){
+            $('#m1 > div').removeClass('con');
+            $('#m2 > div').removeClass(function(){
+             return 'bg';
+    });
+});
+
+    </script>
+</head>
+<body>
+    <h1>p.479 06remove.html</h1>
+
+    <div id="m1">
+        <div class="con">콘텐츠</div>
+    </div>
+    <div id="m2">
+        <div class="c1 bg">내용1</div>
+        <div class="c2 bg">내용2</div>
+        <div class="c3 bg">내용3</div>
+    </div>
+    
+</body>
+</html>

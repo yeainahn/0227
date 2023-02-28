@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>02jQuery</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <style>
+    *{font-size: 16pt;}
+    a{text-align: none;}
+  </style>
+
+  <script>
+  // $(document).ready( function() {버튼클릭,날짜});
+$(document).ready(function(){
+    $('#btn1').click(function(){
+      $('#btn1').css('background','pink');
+      $('#btn1').css('border','3px solid navy');
+      $('#btn1').css('height','70px');
+      $('#btn1').css('width','100px');
+      $('#display').html("<h2>버튼을 눌러주세요</h2>");
+      // document.getElementById('display').innerText='button1눌렀습니다';
+
+    });
+
+    
+    $('#btn2_mytroyesivan').click(function(){
+      $(this).css('background','purple');
+      $(this).css('border','1px solid red');
+      $(this).css('color','white');
+      $(this).css('height','100px');
+      $('#btn2_mytroyesivan').css('width','300px');
+      $('#display').text('<h2>마이버튼 button2</h2>');
+
+
+    });
+
+
+    $('#btn3').click(function(){
+      $('#btn3').css( {
+        'background' : '#fff000',
+        'border' : '3px solid green',
+        'height' : '70px',
+        'width' : '100px',
+        'color' : 'brown',
+        'border-radius' : '10px'
+      });
+      $('#display').html("<h2>버튼을 눌러주세요 - 문자열안예</h2>");
+
+
+    });
+
+
+    $('#btn4').click(function(){
+        // $('#display').css({'background':'pink', 'height':'60px','color':'purple'});
+        $('#display').text('display 영역입니다. \n내일지나면 3월이에요').css({'background':'black', 'height':'60px','color':'lightgray'});
+    });
+
+    $('#title').focus(function(){
+         $(this).css('background','lightblue');
+    });
+
+
+    $('#title').blur(function(){
+        $(this).css('background','red');
+    });
+});     //제이쿼리 시작의 끝괄호  
+  
+  </script>
+</head>
+<body>
+ <h2>02testjQuery</h2>
+ <input type="text" name="title" id="title" placeholder="멍청한 안예인"><br>
+ <!--       입력한 초점이 가면 focus(), 초점이 뭉게지면 blur불러   -->
+ <!--       버튼 이미지는 click      -->
+ <input type="button" id="btn1" value="못생인 안예인">
+ <input type="button" id="btn2_mytroyesivan" value="bts보다 차동현">
+ <input type="button" id="btn3" value="폭행범 안예인"><br>
+ <input type="button" id="btn4" value="내 옷 따리 입지마">
+ <input type="button" id="btn5" onclick="location.reload()" value="버튼5=로드">  <!-- location.reload=새로고침 -->
+   <p></p> 
+ <div id="display"></div>
+ 
+ 
+</body>
+</html>

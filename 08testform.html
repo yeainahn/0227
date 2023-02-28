@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+<style> *{font-size: 16pt;} </style>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+  function myAAA(){
+   var a = document.getElementById("numa").value;
+   alert('myAAA함수 '+ a);
+   $("#numa").css("background","yellow");
+  }//end 
+
+  function myBBB(){
+    var b = document.myform.numb.value;
+    alert('2월27일 월요일 myBBB함수 '+ b);
+    $("#numb").css("background","red");
+    $("#numa").css("background","pink");
+
+  }//end 
+
+  function myCCC(){                                       //jQuery식
+    var c = $("#numc").val();
+     alert('myAAA함수 '+ c);
+  }//end    
+</script>
+
+</head>
+<body>
+ <form name="myform">
+    코드a: <input type="text" name="numa" id="numa" value=""> <br>
+    코드b: <input type="text" name="numb" id="numb" value=""> <br>
+    코드c: <input type="text" name="numc" id="numc" value=""> <br>
+    <input type="button" onclick="myAAA()" value="myAAA함수">
+    <input type="button" onclick="myBBB()" value="myBBB함수">
+    <input type="button" onclick="myCCC()" value="myCCC함수">
+    <input type="button" onclick="location.reload();" value="재실행">
+ </form>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title> jQuery </title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+<style>
+  *{font-size: 14pt; color:be}
+  a{text-decoration: none;}
+</style>
+
+<script>
+  $(document).ready(function() {
+	$("#empTable > tbody.contents>tr:even").css({background:"beige"})
+	$("#empTable > tbody.contents td").filter(":last-child").css("background","orange");  
+  });
+</script>
+</head>
+<body>
+ 
+  <table  id="empTable"  width="700" >
+		<tbody class="title">
+			<tr bgcolor="#9acd32">
+				<th>사번</th><th>이름</th><th>부서</th><th>급여</th><th>삭제</th>
+			</tr>
+		</tbody>
+		<tbody class="contents">
+			<tr>
+				<td>7700</td><td>smith</td><td>desiner</td><td>2000</td><td><a href="#">삭제</a></td>
+			</tr>
+			<tr>
+				<td>8800</td><td>john</td><td>programmer</td><td>2900</td><td><a href="#">삭제</a></td>
+			</tr>
+     		 <tr>
+				<td>9900</td><td>홍길동</td><td>programmer</td><td>3400</td><td><a href="#">삭제</a></td>
+			</tr>
+      		<tr>
+				<td>9955</td><td>우영우</td><td>OS시스템</td><td>7000</td><td><a href="#">삭제</a></td>
+			</tr>
+			<tr>
+				<td>9977</td><td>본인이름</td><td>SQL관리자</td><td>4500</td><td><a href="#">삭제</a></td>
+			</tr>
+		</tbody>
+  </table>
+  
+</body>
+</html>

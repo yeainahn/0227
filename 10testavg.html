@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02testavg.html</title>
+    <style> button { width: 200px; height: 100px;
+        font-size: 20pt; background: pink;}
+    </style>
+<script>
+    function mypass(){
+        const PI=3.1415 ;  //상수
+        const SM='이수만';   //상수
+        const NT='대한민국';   //상수        
+
+        //재할당금지  PI=7.8; 
+
+        var kor=0, eng=0, hap=0, avg=0, msg='', grade='F', result='';
+        kor=75; eng=70;
+        hap=kor + eng;
+        avg= hap/2;
+
+        if (avg >= 90) { grade='A'; }
+        else if (avg>=80) { grade='B'; }
+        else if (avg>=70) { grade='C'; }
+        else if (avg>=60) { grade='D'; }
+        else { grade= 'F'; }
+
+        if (avg >= 70) { msg= '축합격'; }
+        else {msg ='재시험';}
+
+        result = '총점=' + hap + '평균=' + avg ;
+        result += '<br>학점=' + grade + '결과=' + msg ;
+        document.getElementById('display').innerHTML =result;
+    }
+    
+</script>
+</head>
+<body>
+    
+    <div id="display">
+        <img src="./images/a1.png" alt="">
+    </div>
+    <h2>02testavg.html</h2>
+    <button onclick="mypass()">버튼</button>
+    
+    
+</body>
+</html>
